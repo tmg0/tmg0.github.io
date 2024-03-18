@@ -5,7 +5,7 @@ import Header from '../components/Header.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, date } = Astro.props;
+const { title, description, pubDate } = Astro.props;
 ---
 
 <html lang="en">
@@ -20,7 +20,7 @@ const { title, description, date } = Astro.props;
 				<div class="prose">
 					<div class="title">
 						<div>
-							<span>{date}</span>
+							<span>{pubDate}</span>
 						</div>
 						<h1>{title}</h1>
 						<hr />
