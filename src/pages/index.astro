@@ -2,13 +2,10 @@
 import { getCollection } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import DateFormatter from '../components/DateFormatter.vue'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
-import FormattedDate from '../components/FormattedDate.astro'
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
+const posts = (await getCollection('blog')).sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
 ---
 
 <!doctype html>
@@ -16,27 +13,33 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="bg-slate-100 dark:bg-slate-900">
 		<Header />
-		<main class="pt-[72px]">
-			<section>
-				<ul>
+		<main class="mt-[72px] pt-8 flex flex-col items-center">
+			<div class="flex flex-col min-w-[640px]">
+				<div class="flex items-center gap-2 text-sm text-black/25">
+					<span>@tmg0</span>
+					<span>:</span>
+					<span>home</span>
+					<span>/</span>
+					<span>blog</span>
+				</div>
+
+				<div class="my-20 text-4xl">
+					Blog
+				</div>
+
+				<section class="w-full flex flex-col gap-4">
 					{
 						posts.map(post => (
-							<li>
-								<a href={`/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
+							<a href={`/${post.slug}/`} class="flex items-center gap-4">
+								<DateFormatter value={post.data.date} class="text-black/25" />
+								<span class="underline text-black/75">{post.data.title}</span>
+							</a>
 						))
 					}
-				</ul>
-			</section>
+				</section>
+			</div>
 		</main>
-		<Footer />
 	</body>
 </html>
