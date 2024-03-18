@@ -5,7 +5,7 @@ import Header from '../components/Header.astro'
 import DateFormatter from '../components/DateFormatter.vue'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 
-const posts = (await getCollection('blog')).sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
+const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const posts = (await getCollection('blog')).sort((a, b) => a.data.date.valueOf()
 					{
 						posts.map(post => (
 							<a href={`/${post.slug}/`} class="flex items-center gap-4">
-								<DateFormatter value={post.data.date} class="text-black/25" />
+								<DateFormatter value={post.data.pubDate} class="text-black/25" />
 								<span class="underline text-black/75">{post.data.title}</span>
 							</a>
 						))
