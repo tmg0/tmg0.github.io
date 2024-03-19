@@ -51,5 +51,5 @@ function toggleDark(event?: MouseEvent) {
 </script>
 
 <template>
-  <Component :is="isDark ? SunSolid : MoonSolid" fill="#6b7280" class="cursor-pointer" @click="toggleDark" />
+  <Component :is="isDark ? SunSolid : MoonSolid" class="cursor-pointer text-neutral-500 dark:text-neutral-300" @click="toggleDark" />
 </template>

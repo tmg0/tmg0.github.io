@@ -1,7 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  fill: string
-}>()
+interface Props {
+  fill?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  fill: 'currentColor',
+})
 </script>
 
 <template>
