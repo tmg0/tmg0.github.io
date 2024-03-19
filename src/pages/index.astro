@@ -13,7 +13,7 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="select-none bg-slate-100 dark:bg-slate-900">
+	<body class="select-none font-light bg-slate-100 dark:bg-slate-900">
 		<Header />
 		<main class="mt-[72px] pt-8 flex flex-col items-center">
 			<div class="flex flex-col px-8 xs:w-full min-w-[640px]">
@@ -25,16 +25,16 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
 					<span>blog</span>
 				</div>
 
-				<div class="my-20 text-4xl text-black/75 dark:text-white">
+				<div class="my-24 text-4xl text-black/75 dark:text-white">
 					Blog
 				</div>
 
-				<section class="w-full flex flex-col gap-4">
+				<section class="w-full flex flex-col gap-6">
 					{
 						posts.map(post => (
 							<a href={`/${post.slug}/`} class="flex items-center gap-4">
 								<DateFormatter value={post.data.pubDate} class="text-black/25 dark:text-white/50" />
-								<span class="underline text-black/75 dark:text-white">{post.data.title}</span>
+								<span class="underline text-black/75 dark:text-white/85">{post.data.title}</span>
 							</a>
 						))
 					}
