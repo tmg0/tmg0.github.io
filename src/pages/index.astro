@@ -5,7 +5,7 @@ import Header from '../components/Header.astro'
 import DateFormatter from '../components/DateFormatter.vue'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 
-const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Number(a.slug))
 ---
 
 <!doctype html>
@@ -13,11 +13,11 @@ const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueO
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-slate-100 dark:bg-slate-900">
+	<body class="select-none bg-slate-100 dark:bg-slate-900">
 		<Header />
 		<main class="mt-[72px] pt-8 flex flex-col items-center">
-			<div class="flex flex-col min-w-[640px]">
-				<div class="flex items-center gap-2 text-sm text-black/25">
+			<div class="flex flex-col px-8 xs:w-full min-w-[640px]">
+				<div class="flex items-center gap-2 text-sm text-black/25 dark:text-white/50">
 					<span>@tmg0</span>
 					<span>:</span>
 					<span>home</span>
@@ -25,7 +25,7 @@ const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueO
 					<span>blog</span>
 				</div>
 
-				<div class="my-20 text-4xl">
+				<div class="my-20 text-4xl text-black/75 dark:text-white">
 					Blog
 				</div>
 
@@ -33,8 +33,8 @@ const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueO
 					{
 						posts.map(post => (
 							<a href={`/${post.slug}/`} class="flex items-center gap-4">
-								<DateFormatter value={post.data.pubDate} class="text-black/25" />
-								<span class="underline text-black/75">{post.data.title}</span>
+								<DateFormatter value={post.data.pubDate} class="text-black/25 dark:text-white/50" />
+								<span class="underline text-black/75 dark:text-white">{post.data.title}</span>
 							</a>
 						))
 					}
