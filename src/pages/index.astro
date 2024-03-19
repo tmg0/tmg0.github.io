@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
 		<Header />
 		<main class="my-[72px] py-4 sm:py-8 flex flex-col items-center">
 			<div class="flex flex-col px-8 w-full sm:w-[640px]">
-				<div class="flex items-center gap-2 text-xs sm:text-sm text-black/25 dark:text-white/50">
+				<div class="flex items-center gap-2 text-xs sm:text-sm text-black/25 dark:text-white/25">
 					<span>@tmg0</span>
 					<span>:</span>
 					<span>home</span>
@@ -33,8 +33,8 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
 					{
 						posts.map(post => (
 							<a href={`/${post.slug}/`} class="flex items-start gap-4">
-								<DateFormatter value={post.data.pubDate} class="flex-shrink-0 text-black/25 dark:text-white/50" />
-								<span class="underline text-black/75 dark:text-white/85">{post.data.title}</span>
+								<DateFormatter value={post.data.pubDate} class="flex-shrink-0 text-black/25 dark:text-white/25" />
+								<span class="underline text-black/75 dark:text-white/75">{post.data.title}</span>
 							</a>
 						))
 					}
