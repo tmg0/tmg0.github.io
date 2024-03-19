@@ -13,7 +13,7 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="select-none font-light bg-slate-100 dark:bg-slate-900">
+	<body class="select-none font-light bg-neutral-100 dark:bg-neutral-900">
 		<Header />
 		<main class="my-[72px] py-4 sm:py-8 flex flex-col items-center">
 			<div class="flex flex-col px-8 w-full sm:w-[640px]">
