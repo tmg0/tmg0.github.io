@@ -1,45 +1,25 @@
 ---
 import { getCollection } from 'astro:content'
-import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
 import DateFormatter from '../components/DateFormatter.vue'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import Layout from '../layouts/Layout.astro'
 
 const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Number(a.slug))
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="select-none font-light bg-neutral-100 dark:bg-neutral-900">
-		<Header />
-		<main class="my-[72px] py-4 sm:py-8 flex flex-col items-center">
-			<div class="flex flex-col px-8 w-full sm:w-[640px]">
-				<div class="flex items-center gap-2 text-xs sm:text-sm text-black/25 dark:text-white/25">
-					<span>@tmg0</span>
-					<span>:</span>
-					<span>home</span>
-					<span>/</span>
-					<span>blog</span>
-				</div>
-
-				<div class="my-14 text-3xl sm:my-24 sm:text-4xl text-black/75 dark:text-white">
-					Blog
-				</div>
-
-				<section class="w-full flex flex-col gap-6 text-sm sm:text-base">
-					{
-						posts.map(post => (
-							<a href={`/${post.slug}/`} class="flex items-start gap-4">
-								<DateFormatter value={post.data.pubDate} class="flex-shrink-0 text-black/25 dark:text-white/25" />
-								<span class="underline text-black/75 dark:text-white/75">{post.data.title}</span>
-							</a>
-						))
-					}
-				</section>
-			</div>
-		</main>
-	</body>
-</html>
+<Layout title="Blog" breadcrumbs={['home', 'blog']}>
+  <section class="w-full flex flex-col gap-6 text-sm sm:text-base">
+    {
+      posts.map(post => (
+        <a href={`/${post.slug}/`} class="flex items-start gap-4">
+          <DateFormatter
+            value={post.data.pubDate}
+            class="flex-shrink-0 text-black/25 dark:text-white/25"
+          />
+          <span class="underline text-black/75 dark:text-white/75">
+            {post.data.title}
+          </span>
+        </a>
+      ))
+    }
+  </section>
+</Layout>
