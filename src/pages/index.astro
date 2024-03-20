@@ -13,7 +13,7 @@ const posts = (await getCollection('blog')).sort((a, b) => Number(b.slug) - Numb
         <a href={`/${post.slug}/`} class="flex items-start gap-4">
           <DateFormatter
             value={post.data.pubDate}
-            class="flex-shrink-0 text-black/25 dark:text-white/25"
+            class:list={['flex-shrink-0 text-black/25 dark:text-white/25']}
           />
           <span class="underline text-black/75 dark:text-white/75">
             {post.data.title}

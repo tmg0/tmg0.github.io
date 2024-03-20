@@ -3,12 +3,11 @@ import { useDateFormat } from '@vueuse/core'
 
 const props = defineProps<{
   value: Date
-  class?: string
 }>()
 
 const formatted = useDateFormat(props.value, 'YYYY · MM')
 </script>
 
 <template>
-  <span :class="class">{{ formatted }}</span>
+  <span>{{ formatted }}</span>
 </template>
