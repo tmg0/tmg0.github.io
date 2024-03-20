@@ -39,11 +39,13 @@ const hasNaviBack = breadcrumbs.length > 2
         </div>
 
         <div class="text-black/75 dark:text-white">
-          {hasNaviBack ? <ArrowLeft client:only class:list={['w-6 my-14 text-black/75 dark:text-white cursor-pointer']} /> : null}
-          <div class="text-3xl sm:text-4xl" class:list={[hasNaviBack ? 'my-0' : 'my-14 sm:my-24']}>{title}</div>
+          {hasNaviBack ? <ArrowLeft client:only class:list={['w-6 mt-14 sm:mt-24 mb-8 text-black/75 dark:text-white cursor-pointer']} /> : null}
+          <div class="text-3xl sm:text-4xl" class:list={[hasNaviBack ? 'mb-14 sm:mb-24' : 'my-14 sm:my-24']}>{title}</div>
         </div>
 
-        <slot />
+        <div class="text-black/75 dark:text-white/75">
+          <slot />
+        </div>
       </div>
     </main>
   </body>
