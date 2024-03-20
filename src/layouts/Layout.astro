@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
+import ArrowLeft from '../components/ArrowLeft.vue'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 
 type Props = {
@@ -8,7 +9,9 @@ type Props = {
   breadcrumbs: string[]
 }
 
-const { title, breadcrumbs } = Astro.props;
+const { title, breadcrumbs } = Astro.props
+
+const hasNaviBack = breadcrumbs.length > 2
 ---
 
 <!doctype html>
@@ -35,9 +38,9 @@ const { title, breadcrumbs } = Astro.props;
           }
         </div>
 
-        <div
-          class="my-14 text-3xl sm:my-24 sm:text-4xl text-black/75 dark:text-white"
-        >
+        {hasNaviBack ? <ArrowLeft client:only class:list={['w-6 text-black/75 dark:text-white mt-14 -mb-14 cursor-pointer']} /> : null}
+
+        <div class="my-14 text-3xl sm:my-24 sm:text-4xl text-black/75 dark:text-white">
           {title}
         </div>
 
