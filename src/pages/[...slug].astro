@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
+import Prose from '../components/Prose.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -17,6 +18,8 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title} breadcrumbs={['home', 'blog', post.data.title]}>
   <section class="text-sm sm:text-base">
-    <Content />
+    <Prose>
+      <Content />
+    </Prose>
   </section>
 </Layout>
