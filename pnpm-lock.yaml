@@ -22,7 +22,7 @@ dependencies:
     version: 5.1.0(astro@4.5.11)(tailwindcss@3.4.1)
   '@astrojs/vue':
     specifier: ^4.0.9
-    version: 4.0.9(@babel/core@7.24.3)(astro@4.5.11)(vite@5.2.6)(vue@3.4.21)
+    version: 4.0.9(@babel/core@7.24.3)(astro@4.5.11)(vite@5.2.7)(vue@3.4.21)
   '@vueuse/core':
     specifier: ^10.9.0
     version: 10.9.0(vue@3.4.21)
@@ -57,10 +57,10 @@ devDependencies:
     version: 0.2.7
   oxlint:
     specifier: ^0.2.14
-    version: 0.2.14
+    version: 0.2.15
   unplugin-oxlint:
     specifier: ^0.5.0
-    version: 0.5.2(oxlint@0.2.14)
+    version: 0.5.2(oxlint@0.2.15)
 
 packages:
 
@@ -337,15 +337,15 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vue@4.0.9(@babel/core@7.24.3)(astro@4.5.11)(vite@5.2.6)(vue@3.4.21):
+  /@astrojs/vue@4.0.9(@babel/core@7.24.3)(astro@4.5.11)(vite@5.2.7)(vue@3.4.21):
     resolution: {integrity: sha512-go+dRsDQpZYbwvMTJygw9i9W7apsI36STm/Ic4NTcTnlMGjQZlFi3GyQiPB8rstX+FpuTaCDxFSzDhqfD89tig==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^4.0.0
       vue: ^3.2.30
     dependencies:
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.6)(vue@3.4.21)
-      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.2.6)(vue@3.4.21)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.7)(vue@3.4.21)
+      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.2.7)(vue@3.4.21)
       '@vue/babel-plugin-jsx': 1.2.1(@babel/core@7.24.3)
       '@vue/compiler-sfc': 3.4.21
       astro: 4.5.11(typescript@5.4.3)
@@ -1351,64 +1351,64 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  /@oxlint/darwin-arm64@0.2.14:
-    resolution: {integrity: sha512-ddCNJDIpwdtDy2EveF76jXmHOs63b2AU8vvzHZ4cw6xtHxXgfGSOTAckWfJLKXq+s5LDROMVL2DXIcuizaXYBw==}
+  /@oxlint/darwin-arm64@0.2.15:
+    resolution: {integrity: sha512-oFNk4X3VgVVq1No/wW6UPiBszl46QfqsNloCIzBNMTO1nEyd6FD5RoteTr/0denknFmY+i6/sA6USYMmHGckEA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/darwin-x64@0.2.14:
-    resolution: {integrity: sha512-EvHOIjDpNgMXlDGk7Sr/2C0VszHj7riV+VhjGXyZwVCNFfT6jR2CfJNagTUp9AICkyESPY7UtOHYcsEsEKCtAw==}
+  /@oxlint/darwin-x64@0.2.15:
+    resolution: {integrity: sha512-8fHUfzh0M6G15VM3EaoxAKUZlZ808JHg06ClfJ6WDQAWUiom4cuDnLz/HW2bqWg4hxqeyRKpF9oZKyLlkXJh1Q==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/linux-arm64-gnu@0.2.14:
-    resolution: {integrity: sha512-ptX6gC9wLCI3EMgYJd8cUIbcwTZv7aubuFnCg68bop2SdYAtYZIQQfazsOB/+a1pt/ISkheL19rGeaedmRqaPQ==}
+  /@oxlint/linux-arm64-gnu@0.2.15:
+    resolution: {integrity: sha512-QIclcjAskpi7L8ErJ58IqhLQNizClkrYQEt8brPW/IYHm0fNH154OcJXpdm23Zfqc9TljIwklAckuZoEQtUDnQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/linux-arm64-musl@0.2.14:
-    resolution: {integrity: sha512-F7hzgZB65C+K1ZJkUG8vgDzo+AD/DVU2cUU7o0pv6/cn1BGjcERiyJECzrPXsnYSgeaT88eXoUgnDZNf5mH7Lw==}
+  /@oxlint/linux-arm64-musl@0.2.15:
+    resolution: {integrity: sha512-f7KswNDz1viZN/S6fQmr+47JhVwKLzCyE+L8M5hOJxtlRMlfqn29LCqvjXVfA5geS/BbbCdPbhXaOypuvOx1yA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/linux-x64-gnu@0.2.14:
-    resolution: {integrity: sha512-mEkPz/GXOkPC3HNwN5SHGaT+ajk+twTuPHiI6TRKSbNCMHvi4kV9Ftana+t2hV5IfpbieFhnOsO0iH/iUOdKTA==}
+  /@oxlint/linux-x64-gnu@0.2.15:
+    resolution: {integrity: sha512-JnI1mkbYl/w1t1ShL053x8l6FoIgtITrxvN0nkFpaJl6FIn4436yGYeYS8pOEpQuf52aWCJDH2vNGa18hEV3Sg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/linux-x64-musl@0.2.14:
-    resolution: {integrity: sha512-0jmm/NcD78etW+G9jHAuFjQdl9GW2bXxlOR8/y2jYyYTuCtSuqhzJCK2kWoAcBynacDIsDC+fCZF7qHOPrDHDA==}
+  /@oxlint/linux-x64-musl@0.2.15:
+    resolution: {integrity: sha512-RtATil+QO5kRMK5JYsx5QQERiaKQfLs+NJ/Sd+H4eI1Rdfxc+8JGUuEm6TBlr3hq/tzxif2UiHBbJ3FrDJPRoQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/win32-arm64@0.2.14:
-    resolution: {integrity: sha512-P5vaQFjtVnshk94PMaW/kot/FKH9y8fjhd7vwGp6eRO32QOkSMbG7jOtuvlFOb4E9lGyQaihJ9yVbP9vmkvzvw==}
+  /@oxlint/win32-arm64@0.2.15:
+    resolution: {integrity: sha512-odewb/0qAh51Zd4bz6aZolYNvD9MBFRCk/ojFd5SWm86QxJKzn3su5CK+egy6rEonD7VZeAK8qK0QAACpDf8YA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@oxlint/win32-x64@0.2.14:
-    resolution: {integrity: sha512-ORXoR8DpAOWX/3YDBwOCg+yUORu6cK/GUYEq22BpUXn/HRljiFbEBoBWadOhfow/K+/j9OGUxPeepe8zthN2iA==}
+  /@oxlint/win32-x64@0.2.15:
+    resolution: {integrity: sha512-z+jvd7UkWq+eu7ZJ98jAQbThXT1JhXQxa0mttZ/UYHaYH4O/eL2PSA/d1bKj6X2kNPcITomUHBgEcA6kK6Dilw==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -2015,7 +2015,7 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /@vitejs/plugin-vue-jsx@3.1.0(vite@5.2.6)(vue@3.4.21):
+  /@vitejs/plugin-vue-jsx@3.1.0(vite@5.2.7)(vue@3.4.21):
     resolution: {integrity: sha512-w9M6F3LSEU5kszVb9An2/MmXNxocAnUb3WhRr8bHlimhDrXNt6n6D2nJQR3UXpGlZHh/EsgouOHCsM8V3Ln+WA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2025,20 +2025,20 @@ packages:
       '@babel/core': 7.24.0
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.24.0)
       '@vue/babel-plugin-jsx': 1.2.1(@babel/core@7.24.0)
-      vite: 5.2.6
+      vite: 5.2.7
       vue: 3.4.21(typescript@5.4.3)
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@vitejs/plugin-vue@5.0.4(vite@5.2.6)(vue@3.4.21):
+  /@vitejs/plugin-vue@5.0.4(vite@5.2.7)(vue@3.4.21):
     resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.6
+      vite: 5.2.7
       vue: 3.4.21(typescript@5.4.3)
     dev: false
 
@@ -5380,19 +5380,19 @@ packages:
       strip-ansi: 7.1.0
     dev: false
 
-  /oxlint@0.2.14:
-    resolution: {integrity: sha512-LFOnbhtpitIqtHqyBDYAvT5g3ckm3fZ6xAMU8zkaDwC4ofC29ZpxAPuF42ZFJOw1UnufJPUutECSwMco2ho/Fg==}
+  /oxlint@0.2.15:
+    resolution: {integrity: sha512-YDlWV5ak7pKydadA4ifCtT4ymYUhSoWh16DZeDdl0dxewkP9Kh2DvKQ4ep9Yj5YL5ySotj5ITkMjN60GbqMQrw==}
     engines: {node: '>=14.*'}
     hasBin: true
     optionalDependencies:
-      '@oxlint/darwin-arm64': 0.2.14
-      '@oxlint/darwin-x64': 0.2.14
-      '@oxlint/linux-arm64-gnu': 0.2.14
-      '@oxlint/linux-arm64-musl': 0.2.14
-      '@oxlint/linux-x64-gnu': 0.2.14
-      '@oxlint/linux-x64-musl': 0.2.14
-      '@oxlint/win32-arm64': 0.2.14
-      '@oxlint/win32-x64': 0.2.14
+      '@oxlint/darwin-arm64': 0.2.15
+      '@oxlint/darwin-x64': 0.2.15
+      '@oxlint/linux-arm64-gnu': 0.2.15
+      '@oxlint/linux-arm64-musl': 0.2.15
+      '@oxlint/linux-x64-gnu': 0.2.15
+      '@oxlint/linux-x64-musl': 0.2.15
+      '@oxlint/win32-arm64': 0.2.15
+      '@oxlint/win32-x64': 0.2.15
     dev: true
 
   /p-limit@2.3.0:
@@ -6728,7 +6728,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-oxlint@0.5.2(oxlint@0.2.14):
+  /unplugin-oxlint@0.5.2(oxlint@0.2.15):
     resolution: {integrity: sha512-dPxE9gfCZaNsqp5Xymw4aAiD1MmUuVIzPhMNxrIYn382I7XaCIfNLlvWlPW0OTf+rLOKxQw6d4shHxft8itmlA==}
     peerDependencies:
       oxlint: ^0.2.13
@@ -6744,7 +6744,7 @@ packages:
       local-pkg: 0.5.0
       nypm: 0.3.8
       ohash: 1.1.3
-      oxlint: 0.2.14
+      oxlint: 0.2.15
       unplugin: 1.10.0
     transitivePeerDependencies:
       - supports-color
@@ -6826,6 +6826,41 @@ packages:
 
   /vite@5.2.6:
     resolution: {integrity: sha512-FPtnxFlSIKYjZ2eosBQamz4CbyrTizbZ3hnGJlh/wMtCrlp1Hah6AzBLjGI5I2urTfNnpovpHdrL6YRuBOPnCA==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.20.2
+      postcss: 8.4.38
+      rollup: 4.13.2
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: false
+
+  /vite@5.2.7:
+    resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
